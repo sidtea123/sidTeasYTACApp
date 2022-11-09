@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>Banana Maker</title>
+        <style>
+            .flex-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .flex-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .stretch-flex-container {
+                display: flex;
+                align-items: stretch;
+            }
+            .right-side {
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch
+            }
+            .header-image {
+                max-height: 40px;
+            }
+            .big-image {
+                width: 100%;
+            }
+            .purchase-table {
+                display: block;
+                height: 175px;
+                overflow-y: scroll;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mainBar" class="flex-container">
+            <img src="static/minion.webp" height="40">
+            <div class="flex-container">
+                <img src="static/banana.png" class="header-image">
+                <h1 id="bananaDisplay" onclick="saveGame">0</h1>
+            </div>
+            <button id="save">Manual Save</button>
+        </div>
+        <div id="wrapper" class="flex-wrapper">
+            <div id="leftSide" class="stretch-flex-container">
+                <button id="bananaButton" class="big-image">
+                    <img src="static/banana.png" class="big-image">
+                </button>
+            </div>
+            <div id="rightSide" class="right-side">
+                <h1>Buildings</h1>
+                <table id="buildingTable" class="purchase-table">
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                </table>
+                <h1>Upgrades</h1>
+                <table id="upgradeTable" class="purchase-table">
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+    <script src="static/gameHandler.js"></script>
+</html>
